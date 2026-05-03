@@ -1,0 +1,12 @@
+# Yaak'art Studio - Photography Portfolio
+# https://yaakart.com
+
+User-agent: *
+Allow: /
+
+# Disallow admin routes
+Disallow: /admin
+Disallow: /admin/*
+
+# Sitemap
+Sitemap: https://yaakart.com/sitemap.xml

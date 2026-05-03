@@ -1,0 +1,23 @@
+{
+  "name": "Yaak'art Studio",
+  "short_name": "Yaak'art",
+  "description": "Studio de photographie artistique haut de gamme à Dakar.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#B8A070",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
