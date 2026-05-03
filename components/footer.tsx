@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import Image from "next/image"
 
 const socialLinks = [
   {
@@ -58,15 +57,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Logo & Tagline */}
-          <div className="text-center md:text-left flex items-center gap-4">
-            <div className="relative w-12 h-12 overflow-hidden rounded-xl border border-border/50">
-              <Image
-                src="/icon.svg"
-                alt="Yaak'art Studio Logo"
-                fill
-                className="object-cover"
-              />
-            </div>
+          <div className="text-center md:text-left">
             <Link href="/" className="inline-block">
               <span className="text-2xl font-semibold tracking-tight text-foreground leading-none">
                 {"Yaak'art"}

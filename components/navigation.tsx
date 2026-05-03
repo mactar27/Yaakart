@@ -3,7 +3,6 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import Image from "next/image"
 
 const navItems = [
   { name: "Accueil", href: "/" },
@@ -50,23 +49,13 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-10 h-10 overflow-hidden rounded-xl border border-border/50">
-                <Image
-                  src="/icon.svg"
-                  alt="Yaak'art Studio Logo"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-semibold tracking-tight text-foreground leading-none">
-                  {"Yaak'art"}
-                </span>
-                <span className="text-[10px] tracking-[0.35em] text-muted-foreground uppercase mt-1">
-                  Studio
-                </span>
-              </div>
+            <Link href="/" className="flex flex-col">
+              <span className="text-xl md:text-2xl font-semibold tracking-tight text-foreground">
+                {"Yaak'art"}
+              </span>
+              <span className="text-[10px] tracking-[0.35em] text-muted-foreground uppercase">
+                Studio
+              </span>
             </Link>
 
             {/* Desktop Menu */}
