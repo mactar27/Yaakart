@@ -15,8 +15,19 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    
+    // Construction de l'URL mailto avec les données du formulaire
+    const subject = encodeURIComponent(`${formData.subject} - Via Yaak'art Studio`);
+    const body = encodeURIComponent(
+      `Nom: ${formData.name}\n` +
+      `Email: ${formData.email}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    const mailtoUrl = `mailto:Yaakart.studio2024@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Ouverture du client mail par défaut
+    window.location.href = mailtoUrl;
   }
 
   return (
