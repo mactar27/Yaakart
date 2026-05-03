@@ -19,6 +19,7 @@ export async function POST() {
     );
     return NextResponse.json({ success: true });
   } catch (error) {
-    return NextResponse.json({ error: 'Database error' }, { status: 500 });
+    console.error('Database error in POST /api/stats:', error);
+    return NextResponse.json({ success: false, error: 'Database error' }, { status: 200 });
   }
 }
