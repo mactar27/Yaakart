@@ -58,7 +58,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Logo & Tagline */}
           <div className="text-center md:text-left">
-            <Link href="#hero" className="inline-block">
+            <Link href="/" className="inline-block">
               <span className="text-2xl font-semibold tracking-tight text-foreground">
                 {"Yaak'art"}
               </span>
@@ -99,16 +99,16 @@ export function Footer() {
             © {new Date().getFullYear()} Yaak&apos;art Studio. Tous droits réservés.
           </p>
           <nav className="flex items-center gap-6">
-            <Link href="#hero" className="text-xs text-muted-foreground hover:text-accent transition-colors duration-300">
+            <Link href="/" className="text-xs text-muted-foreground hover:text-accent transition-colors duration-300">
               Accueil
             </Link>
-            <Link href="#collections" className="text-xs text-muted-foreground hover:text-accent transition-colors duration-300">
+            <Link href="/collections" className="text-xs text-muted-foreground hover:text-accent transition-colors duration-300">
               Collections
             </Link>
-            <Link href="#about" className="text-xs text-muted-foreground hover:text-accent transition-colors duration-300">
+            <Link href="/about" className="text-xs text-muted-foreground hover:text-accent transition-colors duration-300">
               À propos
             </Link>
-            <Link href="#contact" className="text-xs text-muted-foreground hover:text-accent transition-colors duration-300">
+            <Link href="/contact" className="text-xs text-muted-foreground hover:text-accent transition-colors duration-300">
               Contact
             </Link>
           </nav>

@@ -35,12 +35,8 @@ export default function Home() {
       <main className={isLoading ? "opacity-0" : "opacity-100 transition-opacity duration-1000"}>
         <Navigation />
         <Hero />
-        <Collections />
         <Featured />
         <SignatureWork />
-        <About />
-        <Philosophy />
-        <Contact />
         <Footer />
         <WhatsAppButton />
       </main>

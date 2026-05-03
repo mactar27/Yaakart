@@ -5,10 +5,10 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 
 const navItems = [
-  { name: "Accueil", href: "#hero" },
-  { name: "Collections", href: "#collections" },
-  { name: "À propos", href: "#about" },
-  { name: "Contact", href: "#contact" },
+  { name: "Accueil", href: "/" },
+  { name: "Collections", href: "/collections" },
+  { name: "À propos", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ]
 
 export function Navigation() {
@@ -49,7 +49,7 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo */}
-            <Link href="#hero" className="flex flex-col">
+            <Link href="/" className="flex flex-col">
               <span className="text-xl md:text-2xl font-semibold tracking-tight text-foreground">
                 {"Yaak'art"}
               </span>
