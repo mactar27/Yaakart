@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 
 const socialLinks = [
   {
@@ -26,8 +27,8 @@ const socialLinks = [
     name: "Snapchat",
     href: "https://snapchat.com/t/ss7zvtm7",
     icon: (
-      <svg className="w-6 h-6 scale-125" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12.017 0C8.396 0 5.52 2.902 5.52 6.5c0 .42.04.83.115 1.228-.26.048-.522.085-.8.085-.42 0-.82-.065-1.2-.185l-.06-.02a.525.525 0 00-.16-.025c-.28 0-.52.19-.57.47-.06.33.16.64.49.71.87.19 1.63.45 2.26.77-.02.13-.03.27-.03.41 0 .54.11 1.06.3 1.54-.75.13-1.42.38-1.98.74-.48.31-.73.7-.73 1.09 0 .38.25.72.67.96.44.25.99.38 1.57.38.48 0 .95-.09 1.37-.26.28.64.74 1.19 1.34 1.58.66.43 1.44.65 2.27.65.12 0 .24-.01.36-.02.35.52.57 1.12.57 1.77 0 .38-.07.74-.2 1.08.41.14.82.21 1.23.21.5 0 .99-.11 1.44-.32.46.21.95.32 1.45.32.41 0 .82-.07 1.22-.21-.13-.34-.2-.7-.2-1.08 0-.65.22-1.25.57-1.77.12.01.24.02.36.02.83 0 1.61-.22 2.27-.65.6-.39 1.06-.94 1.34-1.58.42.17.89.26 1.37.26.58 0 1.13-.13 1.57-.38.42-.24.67-.58.67-.96 0-.39-.25-.78-.73-1.09-.56-.36-1.23-.61-1.98-.74.19-.48.3-1 .3-1.54 0-.14-.01-.28-.03-.41.63-.32 1.39-.58 2.26-.77.33-.07.55-.38.49-.71-.05-.28-.29-.47-.57-.47a.525.525 0 00-.16.025l-.06.02c-.38.12-.78.185-1.2.185-.278 0-.54-.037-.8-.085A6.474 6.474 0 0018.514 6.5C18.514 2.902 15.638 0 12.017 0z"/>
+      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M12.017 0c-3.621 0-6.497 2.902-6.497 6.5 0 .42.04.83.115 1.228-.26.048-.522.085-.8.085-.42 0-.82-.065-1.2-.185l-.06-.02a.525.525 0 0 0-.16-.025c-.28 0-.52.19-.57.47-.06.33.16.64.49.71.87.19 1.63.45 2.26.77-.02.13-.03.27-.03.41 0 .54.11 1.06.3 1.54-.75.13-1.42.38-1.98.74-.48.31-.73.7-.73 1.09 0 .38.25.72.67.96.44.25.99.38 1.57.38.48 0 .95-.09 1.37-.26.28.64.74 1.19 1.34 1.58.66.43 1.44.65 2.27.65.12 0 .24-.01.36-.02.35.52.57 1.12.57 1.77 0 .38-.07.74-.2 1.08.41.14.82.21 1.23.21.5 0 .99-.11 1.44-.32.46.21.95.32 1.45.32.41 0 .82-.07 1.22-.21-.13-.34-.2-.7-.2-1.08 0-.65.22-1.25.57-1.77.12.01.24.02.36.02.83 0 1.61-.22 2.27-.65.6-.39 1.06-.94 1.34-1.58.42.17.89.26 1.37.26.58 0 1.13-.13 1.57-.38.42-.24.67-.58.67-.96 0-.39-.25-.78-.73-1.09-.56-.36-1.23-.61-1.98-.74.19-.48.3-1 .3-1.54 0-.14-.01-.28-.03-.41.63-.32 1.39-.58 2.26-.77.33-.07.55-.38.49-.71-.05-.28-.29-.47-.57-.47a.525.525 0 0 0-.16.025l-.06.02c-.38.12-.78.185-1.2.185-.278 0-.54-.037-.8-.085A6.474 6.474 0 0 0 18.514 6.5C18.514 2.902 15.638 0 12.017 0z"/>
       </svg>
     ),
   },
@@ -57,15 +58,24 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Logo & Tagline */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left flex items-center gap-4">
+            <div className="relative w-12 h-12 overflow-hidden rounded-xl border border-border/50">
+              <Image
+                src="/icon.svg"
+                alt="Yaak'art Studio Logo"
+                fill
+                className="object-cover"
+              />
+            </div>
             <Link href="/" className="inline-block">
-              <span className="text-2xl font-semibold tracking-tight text-foreground">
+              <span className="text-2xl font-semibold tracking-tight text-foreground leading-none">
                 {"Yaak'art"}
               </span>
-              <span className="text-[10px] tracking-[0.35em] text-muted-foreground uppercase block">
+              <span className="text-[10px] tracking-[0.35em] text-muted-foreground uppercase block mt-1">
                 Studio
               </span>
             </Link>
+          </div>
             <p className="mt-4 text-xs tracking-[0.2em] text-accent uppercase">
               Œil pour œil
             </p>
