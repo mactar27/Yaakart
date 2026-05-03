@@ -76,10 +76,11 @@ export function Footer() {
               </span>
             </Link>
           </div>
-            <p className="mt-4 text-xs tracking-[0.2em] text-accent uppercase">
+          <div className="flex flex-col gap-2">
+            <p className="text-xs tracking-[0.2em] text-accent uppercase">
               Œil pour œil
             </p>
-            <p className="mt-3 text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground">
               Photographie artistique & storytelling visuel.
             </p>
           </div>
