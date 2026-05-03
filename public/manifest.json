@@ -6,18 +6,5 @@
   "display": "standalone",
   "background_color": "#FAFAFA",
   "theme_color": "#B8A070",
-  "icons": [
-    {
-      "src": "/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    },
-    {
-      "src": "/apple-icon.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ]
+  "icons": []
 }
