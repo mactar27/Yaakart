@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 export function BackgroundEffects() {
   const [isMounted, setIsMounted] = useState(false)
+  const isMobile = useIsMobile()
 
   useEffect(() => {
     setIsMounted(true)
@@ -20,7 +22,7 @@ export function BackgroundEffects() {
           x: [-20, 20, -20],
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] bg-accent/20 rounded-full blur-[150px]"
+        className={`absolute -top-[20%] -left-[10%] w-[70%] h-[70%] bg-accent/20 rounded-full ${isMobile ? 'blur-[60px]' : 'blur-[150px]'}`}
       />
       
       <motion.div
@@ -30,11 +32,11 @@ export function BackgroundEffects() {
           y: [-30, 30, -30],
         }}
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[30%] -right-[20%] w-[60%] h-[60%] bg-foreground/5 rounded-full blur-[130px]"
+        className={`absolute top-[30%] -right-[20%] w-[60%] h-[60%] bg-foreground/5 rounded-full ${isMobile ? 'blur-[50px]' : 'blur-[130px]'}`}
       />
 
       {/* Floating Dust Particles (Cinematic Motes) */}
-      {isMounted && [...Array(20)].map((_, i) => (
+      {isMounted && [...Array(isMobile ? 5 : 20)].map((_, i) => (
         <motion.div
           key={i}
           initial={{ 
