@@ -17,7 +17,7 @@ export default function CategoryPage() {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl text-foreground mb-4">Catégorie non trouvée</h1>
-          <Link href="/#collections" className="text-accent hover:underline">
+          <Link href="/collections" className="text-accent hover:underline">
             Retour aux collections
           </Link>
         </div>
@@ -30,7 +30,7 @@ export default function CategoryPage() {
       <div className="max-w-7xl mx-auto">
         {/* Back Button */}
         <Link
-          href="/#collections"
+          href="/collections"
           className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors mb-16 group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
