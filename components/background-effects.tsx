@@ -47,7 +47,7 @@ export function BackgroundEffects() {
           animate={{
             y: ["-10%", "110%"],
             x: ["-5%", "5%"],
-            opacity: [0, 0.3, 0],
+            opacity: [0, 0.8, 0],
           }}
           transition={{
             duration: Math.random() * 20 + 20,
@@ -55,7 +55,7 @@ export function BackgroundEffects() {
             ease: "linear",
             delay: Math.random() * 20,
           }}
-          className="absolute w-1 h-1 bg-accent/30 rounded-full blur-[1px]"
+          className="absolute w-[2px] h-[2px] bg-accent/80 rounded-full blur-[0.5px] shadow-[0_0_8px_rgba(184,160,112,0.6)]"
         />
       ))}
 
