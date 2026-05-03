@@ -106,9 +106,21 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Yaak&apos;art Studio. Tous droits réservés.
-          </p>
+          <div className="flex flex-col gap-1">
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Yaak&apos;art Studio. Tous droits réservés.
+            </p>
+            <p className="text-[10px] text-muted-foreground/60 tracking-wider">
+              <a 
+                href="https://www.instagram.com/wockytech" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors duration-300"
+              >
+                Réalisé par Wockytech
+              </a>
+            </p>
+          </div>
           <nav className="flex items-center gap-6">
             <Link href="/" className="text-xs text-muted-foreground hover:text-accent transition-colors duration-300">
               Accueil
